@@ -257,78 +257,86 @@ body {
 </head>
 <body>
 
-<!-- EXPERIENCE TIMELINE SECTION -->
+<!-- EXPERIENCE SECTION -->
 <section id="experience" class="parallax-section">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="section-title">
-                    <h2>Professional & Research Experience</h2>
-                    <p>Roles, responsibilities, and impact over time</p>
-                </div>
+        <div class="section-title wow fadeInUp" data-wow-delay="0.2s">
+            <h2>Professional & Research Experience</h2>
+            <p>Roles, responsibilities, and impact over time</p>
+        </div>
+
+        <div class="experience-grid wow fadeInUp" data-wow-delay="0.4s" 
+             style="display:grid; grid-template-columns: repeat(2, 1fr); gap:20px; margin-top:20px;">
+
+            <!-- Experience 1 -->
+            <div class="experience-card" style="background:white; border-radius:10px; padding:15px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+                <h4>ML Data Scientist, University of Chicago</h4>
+                <p><em>Present</em></p>
+                <ul>
+                    <li>Agent-orchestrated pipeline (92% F1)</li>
+                    <li>Page layout classifier (71% accuracy)</li>
+                    <li>GPT-5-nano insights from 1.2M papers</li>
+                </ul>
             </div>
 
-            <div class="col-md-12">
-                <div class="timeline-row-wrapper">
-                    <button class="scroll-btn left" onclick="scrollTimeline(-300)">◀</button>
-
-                    <div class="timeline-row">
-                        <!-- Timeline Card -->
-                        <div class="timeline-card">
-                            <h4>ML Data Scientist, University of Chicago</h4>
-                            <p><em>Present</em></p>
-                            <ul>
-                                <li>Agent-orchestrated pipeline (92% F1)</li>
-                                <li>Page layout classifier (71% accuracy)</li>
-                                <li>GPT-5-nano insights from 1.2M papers</li>
-                            </ul>
-                        </div>
-
-                        <div class="timeline-card">
-                            <h4>Research Assistant, CIRES</h4>
-                            <p><em>May 2024 - Aug 2024</em></p>
-                            <ul>
-                                <li>Drought signals in satellite data</li>
-                                <li>Siamese CNN forecasting regional droughts</li>
-                            </ul>
-                        </div>
-
-                        <div class="timeline-card">
-                            <h4>Student Assistant, CIRES</h4>
-                            <p><em>Jan 2024 - Apr 2024</em></p>
-                            <ul>
-                                <li>XGBoost on DistilBERT embeddings (78% F1)</li>
-                                <li>Deployed Flask API in Label Studio</li>
-                            </ul>
-                        </div>
-
-                        <div class="timeline-card">
-                            <h4>Data Scientist, Schneider Electric</h4>
-                            <p><em>Aug 2021 - Jul 2023</em></p>
-                            <ul>
-                                <li>LightGBM failure prediction (87% precision)</li>
-                                <li>Integrated predictive maintenance app</li>
-                                <li>Feature engineering & scalable SQL pipelines</li>
-                            </ul>
-                        </div>
-
-                        <div class="timeline-card">
-                            <h4>Data Science Intern, Schneider Electric</h4>
-                            <p><em>Feb 2021 - Jul 2021</em></p>
-                            <ul>
-                                <li>Created Tableau dashboards for failure metrics</li>
-                                <li>RaspberryPi sensor system & Digital Twin integration</li>
-                                <li>Led tech talks and identified data-driven improvements</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <button class="scroll-btn right" onclick="scrollTimeline(300)">▶</button>
-                </div>
+            <!-- Experience 2 -->
+            <div class="experience-card" style="background:white; border-radius:10px; padding:15px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+                <h4>Research Assistant / Student Assistant, CIRES</h4>
+                <p><em>May 2024 - Aug 2024</em></p>
+                <ul>
+                    <li>Drought signals in satellite data</li>
+                    <li>Siamese CNN forecasting regional droughts</li>
+                </ul>
+                <p><em>Jan 2024 - Apr 2024</em></p>
+                <ul>
+                    <li>XGBoost on DistilBERT embeddings (78% F1)</li>
+                    <li>Deployed Flask API in Label Studio</li>
+                </ul>
             </div>
+
+            <!-- Experience 3 -->
+            <div class="experience-card" style="background:white; border-radius:10px; padding:15px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+                <h4>Data Scientist, Schneider Electric</h4>
+                <p><em>Aug 2021 - Jul 2023</em></p>
+                <ul>
+                    <li>LightGBM failure prediction (87% precision)</li>
+                    <li>Integrated predictive maintenance app</li>
+                    <li>Feature engineering & scalable SQL pipelines</li>
+                </ul>
+            </div>
+
+            <!-- Experience 4 -->
+            <div class="experience-card" style="background:white; border-radius:10px; padding:15px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+                <h4>Data Science Intern, Schneider Electric</h4>
+                <p><em>Feb 2021 - Jul 2021</em></p>
+                <ul>
+                    <li>Created Tableau dashboards for failure metrics</li>
+                    <li>RaspberryPi sensor system & model integration</li>
+                    <li>Led tech talks and identified data projects</li>
+                </ul>
+            </div>
+
         </div>
     </div>
 </section>
+
+<style>
+.timeline-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+.timeline-card h4 {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.timeline-card ul {
+    padding-left: 20px;
+}
+</style>
+
 
 <script>
 function scrollTimeline(distance) {
